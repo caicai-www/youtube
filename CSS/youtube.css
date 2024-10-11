@@ -1,0 +1,259 @@
+    /* 重算盒模型,含padding .margin */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+
+
+    #header {
+        width: 100%;
+        height: 55px;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+
+    #header .menu {
+        width: 100%;
+        height: 35px;
+        position: absolute;
+        line-height: 35px;
+        top: 10px;
+        left: 0px;
+        text-align: left;
+    }
+
+    #header .logo img {
+        position: absolute;
+        top: 15px;
+        height: 30px;
+        left: 3%;
+    }
+
+    #header .menu li {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+    }
+
+    #header .menu li:hover {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(207, 207, 207, 0.333);
+
+    }
+
+
+    #header .menu i {
+        margin-top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    #header .menu li:nth-child(1) {
+        margin-right: calc(30% + 450px);
+    }
+
+    #header .menu li:nth-child(2) {
+        margin-right: 30%;
+    }
+
+    #header input {
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 440px;
+        height: 30px;
+        border-radius: 35px 0 0 35px;
+        z-index: 1;
+        border: solid 1px gray;
+        padding: 10px;
+        outline-color: rgb(0, 44, 167);
+
+    }
+
+    #header input:focus {
+        width: 470px;
+        left: calc(30% - 30px);
+        padding: 0 30px;
+    }
+
+    #header .search {
+        position: absolute;
+        background-color: white;
+        width: 50px;
+        height: 30px;
+        left: calc(30% + 439px);
+        top: 50%;
+        transform: translate(0, -50%);
+        border-radius: 0 35px 35px 0;
+        border: solid 1px gray;
+        z-index: 3;
+        text-align: center;
+    }
+
+    #header .search i {
+        margin-top: 8px;
+    }
+
+
+    #header .search2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 490px;
+        top: 0px;
+        border-radius: 35px 0 0 35px;
+        text-align: center;
+        display: none;
+    }
+
+    /* Input點擊後顯示ICON */
+    #header .search2 input:focus {
+        display: block;
+    }
+
+
+
+
+    #sidebar {
+        width: 15%;
+        height: calc(100vh - 75px);
+        position: fixed;
+        left: 0;
+        top: 55px;
+        color: black;
+        overflow-y: scroll;
+        padding-left: 5px;
+    }
+
+    #sidebar .card {
+        line-height: 30px;
+    }
+
+    #sidebar .card i {
+        margin-right: 20px;
+    }
+
+    #sidebar .card li {
+        list-style: none;
+    }
+
+    #sidebar .card li:hover {
+        background: rgba(207, 207, 207, 0.333);
+        border-radius: 10%;
+    }
+
+    #sidebar .card2 li {
+        display: inline-block;
+        font-size: 12px;
+        left: 0px;
+    }
+
+    #menu {
+        width: 85%;
+        top: 55px;
+        height: 40px;
+        right: 0px;
+        line-height: 30px;
+
+        position: fixed;
+    }
+
+    #menu li {
+        display: inline-block;
+        background: rgba(207, 207, 207, 0.333);
+        border-radius: 5px;
+        margin-left: 20px;
+
+    }
+
+    #menu li:hover {
+        background: rgb(201, 201, 201);
+    }
+
+    #content {
+        width: 85%;
+        margin-top: 105px;
+        margin-left: 15%;
+        padding-top: 15px;
+        padding-left: 10px;
+
+        .box {
+            width: 300px;
+            height: 270px;
+
+            font-size: 12px;
+            text-align: left;
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 30px;
+
+
+
+            .picture {
+
+                width: 300px;
+                height: 200px;
+                text-align: center;
+
+
+                .icon {
+                    width: 40px;
+                    height: 40px;
+
+                    position: absolute;
+                    border-radius: 50%;
+                    z-index: 1000;
+
+                    .title {
+                        width: 250px;
+                        height: 30px;
+                        position: absolute;
+                        top: 5px;
+                        left: 50px;
+                        font-size: 14px;
+                        text-align: left;
+
+
+
+                        .name {
+                            width: 250px;
+                            font-size: 12px;
+                            text-align: left;
+                            position: absolute;
+                            top: 3rem;
+
+
+
+                            .view {
+                                width: 250px;
+                                overflow: visible;
+                                position: absolute;
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* 卷軸 */
